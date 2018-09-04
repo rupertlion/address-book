@@ -17,3 +17,5 @@ class AddressBookWorld {
     await this.browser.close()
   }
 }
+
+setWorldConstructor(AddressBookWorld)

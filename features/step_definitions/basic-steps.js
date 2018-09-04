@@ -1,12 +1,12 @@
 const { After, Given, Then, When } = require('cucumber')
 
+After(async function() {
+    return await this.closeHomePage()
+})
+
 Given('I visit the site', async function() {
     return await this.openHomePage()
 })
-
-After(async function() {
-    return await this.closeHomePage()
-  })
 
 Then('I should see {string}', async function(content) {
   // Write code here that turns the phrase above into concrete actions
