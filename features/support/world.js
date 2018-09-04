@@ -8,7 +8,7 @@ class AddressBookWorld {
   constructor() {}
 
   async openHomePage() {
-    this.browser = await puppeteer.launch()
+    this.browser = this.browser = await puppeteer.launch({headless: false, slowmo: 100})
     this.page = await this.browser.newPage()
     await this.page.goto(HOME_PAGE)
   }
@@ -35,6 +35,27 @@ class AddressBookWorld {
     await this.page.waitForSelector(inputSelector)
     this.inputElement = await this.page.$(inputSelector)
     await this.inputElement.type(content)
+  }
+
+  async checkContactStorageCount(expectedCount) {
+    const actualCount = await this.page.evaluate(
+      () => JSON.parse(window.localStorage.getItem('contacts')).length
+    )
+    expect(actualCount).to.be.eq(expectedCount)
+  }
+
+  btnSelectorFromName(btnName) {
+    switch (btnName) {
+    case 'add contact':
+        return '.add-contact'
+        break
+    case 'save contact':
+        return '.save-contact'
+        break
+    default:
+        throw `${btnName} button is not defined`
+        break
+    }
   }
 }
 
