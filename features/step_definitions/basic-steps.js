@@ -20,8 +20,13 @@ Then('I fill in {string} with {string}', async function(field, content) {
   return await this.fillFormField(field.toLowerCase(), content)
 })
 
+<<<<<<< HEAD
 Then('I should have {int} contact in my address book', async function(int) {
   return await this.newContactForm
+=======
+Then('I should have {int} contact in my address book', async function (contactCount) {
+  return await this.checkContactStorageCount(contactCount)
+>>>>>>> 34a9183771a7c26b69347d0fb8a6fd422d8892eb
 })
 
 Then('I should not see {string}', async function(string) {
