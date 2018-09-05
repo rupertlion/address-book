@@ -25,8 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         notes: notes.value,
         twitter: twitter.value,
       }
-  
-      console.log(`Saving the following contact: ${JSON.stringify(contact)}`)
-      storage.setItem('contacts', JSON.stringify([contact]))
+      let contacts = JSON.parse(storage.getItem('contacts')) || []
+        contacts.push(contact)
+        console.log(`Saving the follow contact: ${JSON.stringify(contact)}`)
+        storage.setItem('contacts', JSON.stringify([contacts]))
     })
+    
   })
