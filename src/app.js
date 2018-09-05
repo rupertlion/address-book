@@ -57,12 +57,10 @@ const renderContacts = () => {
         twitter: twitter.value,
       }
       console.log(`Saving the follow contact: ${JSON.stringify(contact)}`)  
-      storage.setItem('contacts', JSON.stringify([contacts]))
       let contacts = JSON.parse(storage.getItem('contacts')) || []
         contacts.push(contact)
         storage.setItem('contacts', JSON.stringify(contacts))
         renderContacts()
-
-
     })
   })
+
