@@ -58,12 +58,11 @@ const renderContacts = () => {
       }
       console.log(`Saving the follow contact: ${JSON.stringify(contact)}`)  
       storage.setItem('contacts', JSON.stringify([contacts]))
-      
-      const contacts = JSON.parse(storage.getItem('contacts')) || []
+      let contacts = JSON.parse(storage.getItem('contacts')) || []
         contacts.push(contact)
-        
         storage.setItem('contacts', JSON.stringify(contacts))
-        
         renderContacts()
+
+
     })
   })
