@@ -15,10 +15,10 @@ const renderContacts = () => {
                     <div class="text-center sm:text-left sm:flex-grow">
                         <div class="mb-4">
                             <p class="text-xl leading-tight">${ contact.name }</p>
-                            <p class="text-m leading-tight text-grey-dark">${ contact.company}</p>
-                            <p class="text-s leading-tight text-grey-dark">${ contact.notes}</p>
-                            <p class="text-sm leading-tight text-grey-dark">${ contact.email}</p>
-                            <a class="text-sm leading-tight text-grey-dark" href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+                            <p class="text-lg leading-tight text-grey-dark">${ contact.company}</p>
+                            <p class="text-base leading-tight text-grey-dark">${ contact.email}</p>
+                            <a class="text-base leading-tight text-grey-dark" href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+                            <p class="text-sm leading-tight text-grey-dark">${ contact.notes}</p>
                         </div>
                     </div>
                     <div>
