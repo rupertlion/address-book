@@ -26,12 +26,25 @@ const renderContacts = () => {
                     </div>
                 </div>
             </div>
-    `
+      `
     ul.appendChild(contactcard)
     })
     div.appendChild(ul)
   } else {
-    div.innerHTML = '<p>You have no contacts in your address book</p>'
+    div.innerHTML = `
+      <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden mt-6 py-6">
+        <div class="sm:flex sm:items-center">  
+          <div class="flex flex-wrap -mx-3 mb-4 px-3 py-3">
+            <div class="w-full md:w-full px-3">  
+              <div class="bg-orange-lightest border-l-4 border-orange text-orange-dark p-4" role="alert">
+                <p class="text-center">You have no contacts in your address book</p>
+                <p class="text-center">Please add contacts above</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
   }
 }
 
