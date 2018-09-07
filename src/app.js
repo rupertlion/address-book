@@ -22,7 +22,7 @@ const renderContacts = () => {
                         </div>
                     </div>
                     <div>
-                        <a href="mailto:${contact.email}" class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Email me</a>
+                        <a href="mailto:${ contact.email}" class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Email me</a>
                     </div>
                 </div>
             </div>
