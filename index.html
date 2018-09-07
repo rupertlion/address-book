@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Address book</title>
+</head>
+
+<body>
+  <h1>Contacts</h1>
+  <button class="add-contact">Add Contact</button>
+  <form class="new-contact-form" action="#">
+    <label for="name">Name</label>
+    <input id="contact-name" name="name" type="text">
+    <label for="email">Email</label>
+    <input id="contact-email" name="email" type="email">
+    <label for="phone">Phone</label>
+    <input id="contact-phone" name="phone" type="text">
+    <label for="company">Company</label>
+    <input id="contact-company" name="company" type="text">
+    <label for="notes">Notes</label>
+    <textarea id="contact-notes" name="notes" type="text"></textarea>
+    <label for="twitter">Twitter</label>
+    <input id="contact-twitter" name="twitter" type="text">
+    <input class="save-contact" type="submit" value="Save contact">   
+  </form>
+  <script src="./dist/bundle.js"></script>
+  <div class="contact-list">
+    
+  </div>  
+</body>
+
+
+</html>
